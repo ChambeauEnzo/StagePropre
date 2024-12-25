@@ -1,5 +1,6 @@
-/* Style global */
-body {
+                                            /*decaler le titre plus vers la droite*/
+/* Style global */                                              
+body {                                                           
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -40,14 +41,17 @@ body {
     color: #b40000; /* Couleur au survol */
 }
 
-                                                    /*SECTION DU SITE*/
+                                                     /*SECTION DU SITE*/
+                                            /*afaire responsive image section salon*/
+                                    /*rajouter peit logo postion, dans le modal mettre espace*/
 
 /* Sections */
 section {
     padding: 20px;
     margin: 20px 0; /* Marge pour espacer les sections */
-    background-color: #fff; /* Fond blanc pour les sections */
+    background-color: #bdbdbd; /* Fond blanc pour les sections */
     border-radius: 8px; /* Coins arrondis pour les sections */
+    text-align: left; /* Aligne tout le contenu à gauche */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour des sections */
 }
 /* Footer */
@@ -63,10 +67,13 @@ footer {
 
 /* Section Salon */
 .salon-section {
-    background-color: #f7f7f7; /* Couleur de fond */
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Ajuste la largeur de la "bulle" */
+    max-height: 520px; /* Limite maximale de largeur */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px; /* Ajoute de l'espace intérieur autour du contenu */
+    background: #f4f4f4; /* Couleur de fond douce */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner un effet de "bulle" */
 }
 
 /* Conteneur principal de l'image et du texte */
@@ -117,7 +124,7 @@ footer {
 
 .salon-main-photo img {
     width: 100%;
-    height: 42.5%;
+    height: 42%;
     object-fit: cover; /* Garde les proportions */
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
@@ -156,47 +163,293 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(10px); /* Applique un flou au fond derrière la modale */
 }
 
+/* Contenu de la modale */
 .photo-modal-content {
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
-    max-width: 900px;
+    width: 90%; /* Prendre 90% de la largeur de l'écran */
+    max-width: 1200px; /* Limite à 1200px de largeur */
+    height: auto;
     text-align: center;
     position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Hauteur max de la modale à 90% de la hauteur de la fenêtre */
+    padding-bottom: 50px; /* Ajout d'un padding pour espacer la dernière image du bas */
 }
 
+/* Liste d'images à l'intérieur de la modale (deux colonnes fixes) */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Fixe à deux colonnes */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    max-height: 75vh; /* Limite la hauteur des images dans le modal */
 }
 
+/* Images dans la modale */
 .photo-grid img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Ajuste les images sans les déformer */
 }
 
+
+/* Croix de fermeture dans un carré (placée en haut à droite de l'écran) */
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
+    position: fixed; /* Fixe la croix de fermeture en haut à droite */
+    top: 20px; /* Décalage vers le haut */
+    right: 20px; /* Décalage vers la droite */
+    font-size: 36px;
+    font-weight: bold;
     color: #333;
+    cursor: pointer;
+    z-index: 1050; /* S'assure que la croix est au-dessus de tout */
+    background: rgba(255, 255, 255, 0.7);
+    padding: 12px; /* Taille de l'intérieur du carré */
+    border-radius: 5px; /* Coins du carré légèrement arrondis */
+    width: 50px; /* Taille du carré */
+    height: 50px; /* Taille du carré */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.photo-gallery-trigger img {
+/* Croix - survol */
+.close-modal:hover {
+    background: rgba(255, 255, 255, 0.9); /* Change légèrement le fond au survol */
+}
+
+
+                                              /*SECTION SERVICES*/
+
+
+
+
+
+
+
+                                             
+                                             /*SECTION HORAIRE*/
+
+/* SECTION HORAIRES */
+#horaires {
     width: 100%;
-    height: 40%; /* Prendre toute la hauteur disponible */
-    object-fit: cover; /* Garde les proportions sans déformer */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    margin: 5px; /* Ajouter des marges pour espacer les images */
+    max-width: 1220px; /* Largeur maximale identique à celle de la section Salon */
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: center;
+}
+
+/* Titre de la section */
+#horaires h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Texte sous le titre */
+#horaires p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Conteneur des cartes horaires */
+.horaires-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 5px;
+}
+
+/* Carte des horaires */
+.horaires-card {
+    background: #e8e8e8;
+    padding: 15px; /* Réduit l'espace intérieur */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centrer les bulles */
+    width: 260px;
+    height: 140px; /* Réduit la hauteur des bulles */
+}
+
+.horaires-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Carte fermée (dimanche)(lundi) */
+.horaires-card.closed {
+    background: #e2e2e2;
+    color: #aaa;
+}
+
+/* Détails du texte */
+.horaires-card h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.horaires-card p {
+    font-size: 0.9rem; /* Réduit la taille du texte des horaires */
+}
+
+/* Séparateur entre les horaires */
+.horaires-card .horaire-matin,
+.horaires-card .horaire-apres-midi {
+    display: block;
+    margin-bottom: 0px; /* Moins d'espace entre les horaires du matin et de l'après-midi */
+
+}
+
+/* Bouton de contact */
+.contact-option {
+    margin-top: 10px;
+}
+
+.btn-contact {
+    padding: 12px 30px;
+    background-color: #b8b8b8;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #333;
+}
+
+/* Appliquer une couleur différente pour le jour actuel */
+.jour.highlight {
+    color: #d82a03; /* Exemple de couleur pour le jour actuel, tu peux changer cette couleur */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Responsive - Mobile first */
+@media (max-width: 768px) {
+    #horaires h2 {
+        font-size: 1.4rem;
+    }
+
+    .horaires-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .horaires-card p {
+        font-size: 1rem;
+    }
+}
+
+                                            /*SECTION LOCALISATION*/
+
+
+#localisation {
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 1300px; /* Limite la largeur maximale */
+    background: #f4f4f4; /* Couleur de fond douce */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    color: #333; /* Couleur du texte */
+    padding: 20px; /* Ajout d'un peu de padding pour l'intérieur */
+}
+                                        
+/* Titre de la section */
+#localisation h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+                                        
+ /* Texte sous le titre */
+#localisation a {
+    color: #000000; /* Couleur bleue pour l'adresse */
+    text-decoration: none; /* Supprime le souligné par défaut */
+}
+                                        
+#localisation a:hover {
+    text-decoration: underline; /* Souligné au survol */
+    color: #867e80; /* Remplacez par la couleur de survol de votre choix */
+}
+                                        
+ /* Conteneur de la carte */
+.map-container {
+    border-radius: 12px; /* Coins arrondis pour la carte */
+    overflow: hidden; /* Empêche les débordements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la carte */
+    margin-top: 20px; /* Espace au-dessus de la carte */
+    padding: 0; /* Supprime le padding autour de la carte */
+    max-width: 60%; /* Réduit la largeur de la carte */
+    margin-left: 0; /* La carte reste à gauche */
+    margin-right: auto; /* Le rétrécissement se fait uniquement du côté droit */
+}
+                                        
+/* Carte intégrée (iframe) */
+.map-container iframe {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: 400px; /* Hauteur de la carte */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 12px; /* Coins arrondis pour l'iframe */
+}
+                                        
+                                             /*SECTION APROPOS*/
+
+
+/* SECTION À PROPOS */
+#apropos {
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 1300px; /* Limite la largeur maximale */
+    background: #f4f4f4; /* Couleur de fond douce */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    color: #333; /* Couleur du texte */
+    padding: 20px; /* Espace intérieur */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+/* Titre de la section */
+#apropos h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+/* Conteneur de la bulle de texte */
+.apropos-bubble {
+    background: #ffffff; /* Fond de la bulle */
+    padding: 20px; /* Espace intérieur de la bulle */
+    border-radius: 15px; /* Coins arrondis de la bulle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour de la bulle */
+    max-width: 60%; /* Limite la largeur de la bulle */
+    margin-left: -0%; /* Décale la bulle vers la gauche */
+    margin-right: 5%; /* Ajoute un peu de marge à droite */
+}
+
+/* Texte dans la bulle */
+.apropos-bubble p {
+    font-size: 1rem;
+    color: #000000; /* Couleur du texte */
+    margin: 0;
+    line-height: 1.6; /* Espacement entre les lignes */
 }
 
 

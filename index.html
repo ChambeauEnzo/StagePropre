@@ -71,34 +71,101 @@
                                 <div class="photo-grid">
                                     <img src="image/22.jpg" alt="Façade du salon">
                                     <img src="image/33.jpg" alt="Postes de coiffure">
-                                    <img src="image/44.jpg" alt="Produits capillaires">
+                                    <img src="image/55.jpg" alt="Produits capillaires">
                                     <img src="image/11.jpg" alt="shampoings">
-                                    <img src="image/55.jpg" alt="Autre image">
+                                    <img src="image/44.jpg" alt="Autre image">
                                 </div>
                             </div>
                         </div>
                 </section>            
 
         <section id="services" class="mb-5">
-            <h2>Services</h2>
+            <h2>Choix des prestation</h2>
             <p>Découvrez nos services : coupes, couleurs, soins capillaires, et bien plus.</p>
         </section>
+
         <section id="horaires" class="mb-5">
             <h2>Horaires</h2>
-            <p>Nous sommes ouverts du lundi au samedi de 9h à 19h.</p>
+            <p>Nous sommes ouverts du mardi au samedi entre 8h30 et 19h.</p>
+            
+            <!-- Conteneur pour les horaires -->
+            <div class="horaires-cards">
+                <div class="horaires-card closed">
+                    <h3 class="jour" data-jour="lundi">Lundi</h3>
+                    <p class="horaire-matin">Ferme</p>
+                    <p class="horaire-apres-midi"></p>
+                </div>
+                
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="Mardi">Mardi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 19h00</p>
+                </div>
+                
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="mercredi">Mercredi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 19h00</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="jeudi">Jeudi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 19h00</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="vendredi">Vendredi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 19h00</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="samedi">Samedi</h3>
+                    <p class="horaire-matin">9h00 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 17h00</p>
+                </div>
+                <div class="horaires-card closed">
+                    <h3 class="jour" data-jour="dimanche">Dimanche</h3>
+                    <p class="horaire-matin">Ferme</p>
+                    <p class="horaire-apres-midi"></p>
+                </div>
+            </div>
         </section>
+        
         <section id="localisation" class="mb-5">
-            <h2>Localisation</h2>
-            <p>Retrouvez-nous au 123 Rue du Salon, Ville.</p>
+            <h2>Ou se situe le salon ?</h2>
+        <p>
+            <a href="https://www.google.com/maps/search/?q=40+bis+rue+Jean+Jaurès,+80170+Rosières+en+Santerre" target="_blank">
+                40 bis rue Jean Jaurès, 80170 Rosières en Santerre
+            </a>
+        </p>
+            <!-- Carte avec l'adresse spécifique -->
+            <div class="map-container">
+                   <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6336.233676529736!2d2.705074002006298!3d49.81512058015924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eacdb271f3d6cf%3A0xaac20be327be1a4!2sRosiere%20en%20Santerre%20Espace%20Coiffure!5e0!3m2!1sen!2sfr!4v1622280054294!5m2!1sen!2sfr"
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            </div>
         </section>
+        
         <section id="apropos" class="mb-5">
             <h2>À propos</h2>
-            <p>Espace ISA'PHIL coiffure, votre espace beauté dédié à la coiffure et au bien-être.</p>
-        </section>
+            <div class="apropos-bubble">
+                <p>Espace ISA'PHIL coiffure, votre espace beauté dédié à la coiffure et au bien-être.</p>
+                <p>Venez découvrir l'expertise de nos coiffeurs entièrement dévoués à réaliser vos souhaits</p>
+                <p>Que vous recherchiez un changement radical ou simplement une touche de fraîcheur, notre équipe est là pour vous.                </p>
+                <p>Au plaisir de vous accueillir très bientôt !</p>
+            </div>
+        </section>        
     </main>
 
-    <footer class="bg-dark text-white text-center p-3">
-        &copy; 2024 - Espace ISA'PHIL coiffure
-    </footer>
+       <footer class="bg-dark text-white text-center p-3">
+            &copy; 2024 - Espace ISA'PHIL coiffure
+       </footer>
 </body>
 </html>
+
+
+
