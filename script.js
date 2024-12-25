@@ -10,7 +10,8 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
     });
 });
 
-
+                                 
+/*image MODAL*/
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("photoModal");
     const trigger = document.querySelector(".photo-gallery-trigger img");
@@ -29,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
         body.style.overflow = "auto"; // Réactive le défilement de la page principale
     });
 });
-
+                               
+/*horaire*/
 document.addEventListener("DOMContentLoaded", function() {
     const today = new Date(); // Récupère la date actuelle
     const jours = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];

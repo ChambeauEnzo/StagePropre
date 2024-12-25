@@ -231,13 +231,80 @@ footer {
 
                                               /*SECTION SERVICES*/
 
+/* SECTION SERVICES */
+#services {
+    width: 100%;
+    max-width: 1300px;
+    margin: 20;
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
 
+/* Titre de la section */
+#services h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
+/* Texte sous le titre */
+#services p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
 
+/* Conteneur des cartes de services */
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    gap: 20px;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    max-width: 1211px; /* Contrôle la largeur totale du conteneur */
+}
 
+/* Carte de service */
+.service-card {
+    background: #d4d4d4; /* Couleur de fond de la carte */
+    padding: 20px; /* Augmente l'espace intérieur de la carte */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center; /* Centre le contenu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets au survol */
+    display: flex; /* Utilisation de Flexbox */
+    flex-direction: column; /* Organisation verticale */
+    justify-content: space-between; /* Espace égal entre les éléments */
+    align-items: center; /* Centre horizontalement les éléments */
+    width: 100%; /* Largeur par défaut */
+    max-width: 230px; /* Limite la largeur maximale de chaque carte */
+    height: 150px; /* Hauteur fixe pour uniformiser les cartes */
+    margin: 0 auto; /* Centre les cartes dans leur conteneur */
+}
 
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-                                             
+/* Titre de la carte */
+.service-card h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texte de la carte */
+.service-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+                       
                                              /*SECTION HORAIRE*/
 
 /* SECTION HORAIRES */
