@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace ISA'PHIL coiffure</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien Bootstrap (pour responsivité) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Espace ISA'PHIL coiffure</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="#salon">Salon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#horaires">Horaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#localisation">Localisation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <main class="container mt-5">
+            <section id="salon" class="salon-section">
+                <div class="salon-container">
+                    <!-- Image principale avec texte en haut à gauche -->
+                    <div class="salon-main-photo-container">
+                        <!-- Texte au-dessus de l'image -->
+                        <div class="salon-main-text">
+                            <h1>Espace ISA' PHIL coiffure</h1>
+                            <p>Salon Climatisé</p>
+                            <p>
+                                <a href="https://www.google.com/maps/search/?q=40+bis+rue+Jean+Jaurès,+80170+Rosières+en+Santerre" target="_blank">
+                                    40 bis rue Jean Jaurès, 80170 Rosières en Santerre
+                                </a>
+                            </p>
+                        </div>
+            
+                        <!-- Image principale à gauche et images à droite -->
+                        <div class="salon-images">
+                            <!-- Image principale à gauche -->
+                            <div class="salon-main-photo">
+                                <img src="image/11.jpg" alt="Intérieur du salon">
+                            </div>
+            
+                            <!-- Galerie d'images à droite -->
+                            <div class="salon-side-gallery">
+                                <div class="side-image-row">
+                                    <img src="image/22.jpg" alt="Façade du salon">
+                                    <img src="image/32.jpg" alt="Postes de coiffure">
+                                </div>
+                                <div class="side-image-row">
+                                    <img src="image/55.jpg" alt="Produits capillaires">
+                            <!-- Déclencheur modale -->
+                            <div class="photo-gallery-trigger">
+                                    <img src="image/noir.jpg" alt="Voir toutes les images">
+                                </div>
+
+                    <!-- Nouvelle fonctionnalité : Voir toutes les photos -->
+                     <div class="photo-modal" id="photoModal">
+                         <div class="photo-modal-content">
+                         <span class="close-modal" id="closeModal">&times;</span>
+                                <div class="photo-grid">
+                                    <img src="image/22.jpg" alt="Façade du salon">
+                                    <img src="image/33.jpg" alt="Postes de coiffure">
+                                    <img src="image/44.jpg" alt="Produits capillaires">
+                                    <img src="image/11.jpg" alt="shampoings">
+                                    <img src="image/55.jpg" alt="Autre image">
+                                </div>
+                            </div>
+                        </div>
+                </section>            
+
+        <section id="services" class="mb-5">
+            <h2>Services</h2>
+            <p>Découvrez nos services : coupes, couleurs, soins capillaires, et bien plus.</p>
+        </section>
+        <section id="horaires" class="mb-5">
+            <h2>Horaires</h2>
+            <p>Nous sommes ouverts du lundi au samedi de 9h à 19h.</p>
+        </section>
+        <section id="localisation" class="mb-5">
+            <h2>Localisation</h2>
+            <p>Retrouvez-nous au 123 Rue du Salon, Ville.</p>
+        </section>
+        <section id="apropos" class="mb-5">
+            <h2>À propos</h2>
+            <p>Espace ISA'PHIL coiffure, votre espace beauté dédié à la coiffure et au bien-être.</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2024 - Espace ISA'PHIL coiffure
+    </footer>
+</body>
+</html>

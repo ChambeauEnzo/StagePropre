@@ -1,0 +1,204 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+                                                         /*MENU GLOBAL*/
+
+/* Navigation */
+.navbar {
+    background-color: #7a7272; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 15px 0; /* Hauteur globale de la navigation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Titre de la navigation */
+.navbar-brand {
+    color: #fff; /* Texte blanc */
+    font-size: 1.5rem; /* Taille du titre */
+}
+
+/* Sous-menus */
+.navbar-nav {
+    flex-direction: row; /* Alignement horizontal */
+    gap: 45px; /* Espacement entre les sous-menus */
+    margin-right: -140px; /* Décalage des sous-menus à droite */
+}
+
+/* Liens des sous-menus */
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Taille des liens */
+    text-decoration: none;
+    padding: 10px 15px; /* Espace autour des liens */
+    transition: color 0.3s ease; /* Effet doux au survol */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b40000; /* Couleur au survol */
+}
+
+                                                    /*SECTION DU SITE*/
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px 0; /* Marge pour espacer les sections */
+    background-color: #fff; /* Fond blanc pour les sections */
+    border-radius: 8px; /* Coins arrondis pour les sections */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour des sections */
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+                                                    /*SECTION SALON*/
+
+
+/* Section Salon */
+.salon-section {
+    background-color: #f7f7f7; /* Couleur de fond */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Conteneur principal de l'image et du texte */
+.salon-main-photo-container {
+    max-width: 1200px;
+    width: 100%; /* Largeur du conteneur */
+}
+
+/* Texte au-dessus de l'image */
+.salon-main-text {
+    padding: 1px;
+    margin-bottom: 20px; /* Espace entre le texte et les images */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.salon-main-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.salon-main-text p {
+    margin: 3px 0;
+    font-size: 1rem;
+}
+
+.salon-main-text a:hover {
+    color: #867e80; /* Remplacez par la couleur de survol de votre choix */
+    text-decoration: underline; /* Optionnel : ajoute un soulignement au survol */
+}
+
+/* Change la couleur du lien */
+.salon-main-text a {
+    color: #1f1e1e; /* Remplacez par la couleur de votre choix */
+    text-decoration: none; /* Optionnel : enlève le soulignement */
+}
+
+/* Conteneur des images */
+.salon-images {
+    display: flex; /* Utilisation de Flexbox pour aligner l'image principale et la galerie d'images */
+    gap: 5px; /* Espacement entre l'image principale et la galerie */
+}
+
+/* Image principale à gauche */
+.salon-main-photo {
+    flex: 1; /* L'image prend 50% de l'espace */
+}
+
+.salon-main-photo img {
+    width: 100%;
+    height: 42.5%;
+    object-fit: cover; /* Garde les proportions */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Galerie d'images à droite (2 lignes de 2 images) */
+.salon-side-gallery {
+    flex: 1; /* L'autre colonne prend aussi 50% de l'espace */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    grid-template-rows: repeat(2, 1fr); /* 2 lignes */
+    gap: 10px; /* Espace entre les images */
+    height: 100%;
+}
+
+/* Images à droite - découper l'image en 4 parties égales */
+.salon-side-gallery img {
+    width: 100%;
+    height: 40%; /* Prendre toute la hauteur disponible */
+    object-fit: cover; /* Garde les proportions sans déformer */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin: 5px; /* Ajouter des marges pour espacer les images */
+}
+
+
+/* Modale - Voir toutes les photos */
+.photo-modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.photo-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.photo-gallery-trigger img {
+    width: 100%;
+    height: 40%; /* Prendre toute la hauteur disponible */
+    object-fit: cover; /* Garde les proportions sans déformer */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin: 5px; /* Ajouter des marges pour espacer les images */
+}
+
+
+
+
