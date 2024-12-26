@@ -10,7 +10,7 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
     });
 });
 
-                                 
+                        
 /*image MODAL*/
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("photoModal");
@@ -50,4 +50,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtenir les boutons et les sections
+    const btnServices = document.getElementById("btn-services");
+    const btnHoraires = document.getElementById("btn-horaires");
+    const sectionServices = document.getElementById("services");
+    const sectionHoraires = document.getElementById("horaires");
+
+    // Fonction pour basculer entre les sections
+    function switchSection(showSection, hideSection, activeButton, inactiveButton) {
+        showSection.style.display = "block"; // Montrer la section active
+        hideSection.style.display = "none"; // Cacher l'autre section
+        activeButton.classList.add("active"); // Ajouter la classe active au bouton
+        inactiveButton.classList.remove("active"); // Supprimer la classe active de l'autre bouton
+    }
+
+    // Ajout des événements de clic
+    btnServices.addEventListener("click", function (e) {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        switchSection(sectionServices, sectionHoraires, btnServices, btnHoraires);
+    });
+
+    btnHoraires.addEventListener("click", function (e) {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        switchSection(sectionHoraires, sectionServices, btnHoraires, btnServices);
+    });
+});
 

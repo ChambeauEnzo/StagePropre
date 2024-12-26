@@ -26,7 +26,7 @@ body {
 .navbar-nav {
     flex-direction: row; /* Alignement horizontal */
     gap: 45px; /* Espacement entre les sous-menus */
-    margin-right: -140px; /* Décalage des sous-menus à droite */
+    margin-right: -145px; /* Décalage des sous-menus à droite */
 }
 
 /* Liens des sous-menus */
@@ -230,6 +230,19 @@ footer {
 
 
                                               /*SECTION SERVICES*/
+.section-navigation a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+.section-navigation a.active {
+    color: #e70303;
+    border-bottom: 2px solid #000;
+}
 
 /* SECTION SERVICES */
 #services {
@@ -243,6 +256,38 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #333;
 }
+
+/* Conteneur de la navigation de section */
+.section-navigation {
+    display: flex; /* Dispose les éléments horizontalement */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    gap: 20px; /* Espacement entre les liens */
+    border-bottom: 1px solid #ddd; /* Ligne en bas */
+    padding-bottom: 10px; /* Espacement sous les liens */
+    margin-bottom: 20px; /* Espacement entre la navigation et le contenu suivant */
+}
+
+/* Style des liens */
+.section-navigation a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    font-size: 1rem; /* Taille du texte */
+    padding-bottom: 5px; /* Espacement sous chaque lien */
+    transition: color 0.3s ease; /* Animation pour le changement de couleur */
+}
+
+/* Lien actif */
+.section-navigation a.active {
+    color: #000; /* Couleur du texte actif */
+    border-bottom: 2px solid #000; /* Ligne noire sous le lien actif */
+}
+
+/* Survol des liens */
+.section-navigation a:hover {
+    color: #555; /* Change la couleur au survol */
+}
+
 
 /* Titre de la section */
 #services h2 {
@@ -304,20 +349,20 @@ footer {
     line-height: 1.3;
 }
 
-                       
+                      
                                              /*SECTION HORAIRE*/
 
 /* SECTION HORAIRES */
 #horaires {
     width: 100%;
-    max-width: 1220px; /* Largeur maximale identique à celle de la section Salon */
-    margin: 0 auto; /* Centrer horizontalement */
+    max-width: 1300px;
+    margin: 20;
     padding: 20px;
+    text-align: center;
     background: #f4f4f4;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #333;
-    text-align: center;
 }
 
 /* Titre de la section */
@@ -430,13 +475,9 @@ footer {
 
 
 #localisation {
-    width: 100%; /* Prend toute la largeur disponible */
-    max-width: 1300px; /* Limite la largeur maximale */
-    background: #f4f4f4; /* Couleur de fond douce */
-    border-radius: 12px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    color: #333; /* Couleur du texte */
-    padding: 20px; /* Ajout d'un peu de padding pour l'intérieur */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
 }
                                         
 /* Titre de la section */
@@ -461,6 +502,7 @@ footer {
 .map-container {
     border-radius: 12px; /* Coins arrondis pour la carte */
     overflow: hidden; /* Empêche les débordements */
+    background-color: #f7f7f7;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la carte */
     margin-top: 20px; /* Espace au-dessus de la carte */
     padding: 0; /* Supprime le padding autour de la carte */
@@ -472,7 +514,7 @@ footer {
 /* Carte intégrée (iframe) */
 .map-container iframe {
     width: 100%; /* Prend toute la largeur du conteneur */
-    height: 400px; /* Hauteur de la carte */
+    height: 450px; /* Hauteur de la carte */
     border: none; /* Supprime la bordure par défaut */
     border-radius: 12px; /* Coins arrondis pour l'iframe */
 }
@@ -482,14 +524,9 @@ footer {
 
 /* SECTION À PROPOS */
 #apropos {
-    width: 100%; /* Prend toute la largeur disponible */
-    max-width: 1300px; /* Limite la largeur maximale */
-    background: #f4f4f4; /* Couleur de fond douce */
-    border-radius: 12px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    color: #333; /* Couleur du texte */
-    padding: 20px; /* Espace intérieur */
-    margin: 0 auto; /* Centrer horizontalement */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 /* Titre de la section */
@@ -502,7 +539,7 @@ footer {
 
 /* Conteneur de la bulle de texte */
 .apropos-bubble {
-    background: #ffffff; /* Fond de la bulle */
+    background: #f7f7f7; /* Fond de la bulle */
     padding: 20px; /* Espace intérieur de la bulle */
     border-radius: 15px; /* Coins arrondis de la bulle */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour de la bulle */
