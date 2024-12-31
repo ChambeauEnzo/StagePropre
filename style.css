@@ -416,7 +416,7 @@ footer {
     line-height: 1.3;
 }
 
-                      
+     
                                              /*SECTION HORAIRE*/
 
 /* SECTION HORAIRES */
@@ -523,18 +523,89 @@ footer {
     font-weight: bold; /* Mettre le texte en gras */
 }
 
-/* Responsive - Mobile first */
-@media (max-width: 768px) {
-    #horaires h2 {
-        font-size: 1.4rem;
+/* Responsive - services et horaires*/
+@media (max-width: 767px) {
+    /* Masquer la navigation par onglets */
+    .section-navigation {
+        display: none;
+    }
+
+    /* Afficher les sections */
+    #services, #horaires {
+        display: block !important; /* Force l'affichage des sections */
+        margin-bottom: 20px; /* Espacement entre les sections */
+    }
+
+    /* Services : bulles horizontales longues */
+    .services-cards {
+        display: flex;
+        flex-direction: column; /* Aligner les bulles verticalement */
+        gap: 10px; /* Réduction de l'espacement entre les bulles */
+        margin: 0 auto; /* Centrer les bulles dans le conteneur */
+    }
+
+    .service-card {
+        display: flex; /* Dispose le contenu en ligne */
+        align-items: center; /* Centre verticalement les éléments */
+        background: #dfdfdf; /* Couleur de fond */
+        border-radius: 20px; /* Coins arrondis pour une apparence fine */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        padding: 10px 15px; /* Espacement intérieur réduit */
+        width: 100%; /* Prend toute la largeur */
+        max-width: 100%; /* Empêche les bulles de dépasser */
+        height: 60px; /* Hauteur réduite pour des bulles fines */
+        text-align: left; /* Texte aligné à gauche */
+        overflow: hidden; /* Empêche le débordement de contenu */
+    }
+
+    .service-card h3 {
+        font-size: 0.9rem; /* Taille du titre légèrement réduite */
+        font-weight: bold;
+        color: #333; /* Couleur du texte */
+        margin-right: 10px; /* Espacement entre le titre et la description */
+        white-space: nowrap; /* Empêche le texte du titre de passer à la ligne */
+        flex-shrink: 0; /* Le titre garde sa taille */
+    }
+
+    .service-card p {
+        font-size: 0.8rem; /* Taille du texte de description réduite */
+        color: #555; /* Couleur de la description */
+        margin: 0; /* Supprime les marges */
+        line-height: 1.2; /* Hauteur de ligne réduite */
+        flex-grow: 1; /* La description occupe l'espace disponible */
+    }
+
+
+    /* Horaires : conserver le style actuel */
+    .horaires-cards {
+        display: grid; /* Aucune modification */
+    }
+    /* Horaires : bulles similaires */
+    .horaires-cards {
+        display: flex;
+        flex-direction: column; /* Aligner verticalement les cartes */
+        gap: 15px;
+    }
+
+    .horaires-card {
+        background: #dfdfdf;
+        padding: 15px;
+        border-radius: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        width: 100%;
     }
 
     .horaires-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
     }
 
     .horaires-card p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -573,7 +644,7 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la carte */
     margin-top: 20px; /* Espace au-dessus de la carte */
     padding: 0; /* Supprime le padding autour de la carte */
-    max-width: 60%; /* Réduit la largeur de la carte */
+    max-width: 63%; /* Réduit la largeur de la carte */
     margin-left: 0; /* La carte reste à gauche */
     margin-right: auto; /* Le rétrécissement se fait uniquement du côté droit */
 }
@@ -585,7 +656,37 @@ footer {
     border: none; /* Supprime la bordure par défaut */
     border-radius: 12px; /* Coins arrondis pour l'iframe */
 }
-                                        
+
+/* Écrans moyens PROBLEME JUSTE CHANGER DIMESION LARGEUR*/
+@media (max-width: 991px) {
+    .map-container {
+        border-radius: 12px; /* Coins arrondis pour la carte */
+        overflow: hidden; /* Empêche les débordements */
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la carte */
+        margin-top: 20px; /* Espace au-dessus de la carte */
+        padding: 0; /* Supprime le padding autour de la carte */
+        max-width: 75%; /* Réduit la largeur de la carte */
+        margin-left: 0; /* La carte reste à gauche */
+        margin-right: auto; /* Le rétrécissement se fait uniquement du côté droit */
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .map-container {
+        border-radius: 12px; /* Coins arrondis pour la carte */
+        overflow: hidden; /* Empêche les débordements */
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la carte */
+        margin-top: 20px; /* Espace au-dessus de la carte */
+        padding: 0; /* Supprime le padding autour de la carte */
+        max-width: 95%; /* Réduit la largeur de la carte */
+        margin-left: 0; /* La carte reste à gauche */
+        margin-right: auto; /* Le rétrécissement se fait uniquement du côté droit */
+    }
+}
+
                                              /*SECTION APROPOS*/
 
 
@@ -610,7 +711,7 @@ footer {
     padding: 20px; /* Espace intérieur de la bulle */
     border-radius: 15px; /* Coins arrondis de la bulle */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour de la bulle */
-    max-width: 60%; /* Limite la largeur de la bulle */
+    max-width: 63%; /* Limite la largeur de la bulle */
     margin-left: -0%; /* Décale la bulle vers la gauche */
     margin-right: 5%; /* Ajoute un peu de marge à droite */
 }
@@ -623,6 +724,27 @@ footer {
     line-height: 1.6; /* Espacement entre les lignes */
 }
 
+/* Écrans moyens JUSTE CHANGER DIMESION LARGEUR */
+@media (max-width: 991px) {
+    .apropos-bubble {
+        background: #f7f7f7; /* Fond de la bulle */
+        padding: 20px; /* Espace intérieur de la bulle */
+        border-radius: 15px; /* Coins arrondis de la bulle */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour de la bulle */
+        max-width: 75%; /* Limite la largeur de la bulle */
+        margin-left: -0%; /* Décale la bulle vers la gauche */
+        margin-right: 5%; /* Ajoute un peu de marge à droite */
+    }
+}
 
-
-
+@media (max-width: 767px) {
+    .apropos-bubble {
+        background: #f7f7f7; /* Fond de la bulle */
+        padding: 20px; /* Espace intérieur de la bulle */
+        border-radius: 15px; /* Coins arrondis de la bulle */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour de la bulle */
+        max-width: 105%; /* Limite la largeur de la bulle */
+        margin-left: -0%; /* Décale la bulle vers la gauche */
+        margin-right: 5%; /* Ajoute un peu de marge à droite */
+    }
+}
