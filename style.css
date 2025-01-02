@@ -1,4 +1,3 @@
-                                            /*decaler le titre plus vers la droite*/
 /* Style global */                                              
 body {                                                           
     font-family: Arial, sans-serif;
@@ -39,6 +38,73 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: #b40000; /* Couleur au survol */
+}
+
+
+/* Centrer le menu dans le mode mobile */
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 10px; /* Espacement réduit entre les liens */
+        margin-right: 0; /* Annule le décalage à droite */
+        text-align: center; /* Centre le texte */
+    }
+
+    /* Ajustement du bouton hamburger pour le menu mobile */
+    .navbar-toggler {
+        border: none; /* Enlève la bordure du bouton hamburger */
+        outline: none; /* Enlève l'outline */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff; /* Change la couleur du hamburger pour qu'il soit visible */
+    }
+
+    /* Ajuste la largeur de la navbar à 100% et la centre */
+    .navbar-collapse {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centre le menu sur les petits écrans */
+    }
+
+    /* Titre mobile */
+    .navbar-brand {
+        margin-left: 0; /* Supprime le décalage à gauche sur mobile */
+        text-align: center; /* Centrer le titre sur mobile */
+        margin-bottom: 10px; /* Ajoute un petit espace sous le titre */
+    }
+}
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 10px; /* Espacement réduit entre les liens */
+        margin-right: 0; /* Annule le décalage à droite */
+        text-align: center; /* Centre le texte */
+    }
+
+    /* Ajustement du bouton hamburger pour le menu mobile */
+    .navbar-toggler {
+        border: none; /* Enlève la bordure du bouton hamburger */
+        outline: none; /* Enlève l'outline */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff; /* Change la couleur du hamburger pour qu'il soit visible */
+    }
+
+    /* Ajuste la largeur de la navbar à 100% et la centre */
+    .navbar-collapse {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centre le menu sur les petits écrans */
+    }
+
+    /* Titre mobile */
+    .navbar-brand {
+        margin-left: 0; /* Supprime le décalage à gauche sur mobile */
+        text-align: center; /* Centrer le titre sur mobile */
+        margin-bottom: 10px; /* Ajoute un petit espace sous le titre */
+    }
 }
 
                                                      /*SECTION DU SITE*/
@@ -223,8 +289,54 @@ footer {
         border-radius: 8px; /* Coins arrondis */
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
     }
+      /*fleche*/
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white; /* Couleur des flèches */
+        font-size: 30px; /* Taille du symbole de la flèche */
+        width: 40px; /* Largeur de la zone cliquable */
+        height: 45px; /* Hauteur de la zone cliquable */
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.8; /* Transparence */
+        transition: opacity 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+        border-radius: 10px; /* Arrondit les coins */
+    }
+    
+    .arrow:hover {
+        opacity: 1; /* Rend la flèche plus visible au survol */
+    }
+    
+    .left {
+        left: 8px; /* Position à gauche */
+        border-top-right-radius: 10px; /* Arrondi spécifique */
+        border-bottom-right-radius: 10px;
+    }
+    
+    .right {
+        right: 8px; /* Position à droite */
+        border-top-left-radius: 10px; /* Arrondi spécifique */
+        border-bottom-left-radius: 10px;
+    }
+
+    .salon-main-photo {
+        position: relative; /* Permet aux flèches de se positionner par rapport à ce conteneur */
+        display: flex;
+        align-items: center; /* Centre verticalement l'image et les flèches */
+        justify-content: center; /* Centre horizontalement si nécessaire */
+   }
 }
 
+@media (min-width: 768px) {   /*fleche cacher a partir de 769px*/
+    .arrow {
+        display: none; /* Les flèches seront cachées */  /* (flex) Les flèches sont visibles */
+    }
+}
 
 /* Modale - Voir toutes les photos */
 .photo-modal {
@@ -303,6 +415,44 @@ footer {
     background: rgba(255, 255, 255, 0.9); /* Change légèrement le fond au survol */
 }
 
+@media (max-width: 1199px) {
+    /* Grille d'images dans la modale */
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Toujours deux colonnes */
+        gap: 20px; /* Un espacement plus grand entre les images */
+        justify-items: center; /* Centre les éléments horizontalement dans la grille */
+        align-items: center; /* Centre les éléments verticalement dans la grille */
+    }
+
+    /* Contenu de la modale */
+    .photo-modal-content {
+        width: 80%; /* La largeur de la modale reste à 80% de la fenêtre */
+        max-width: 1200px; /* Limite la largeur à 1200px */
+        padding: 25px; /* Un peu plus de padding pour la modale */
+        max-height: 85vh; /* Limite la hauteur à 85% de la fenêtre */
+        margin: 0 auto; /* Centrer la modale horizontalement */
+    }
+
+    /* Croix de fermeture */
+    .close-modal {
+        top: 20px; /* Position ajustée pour la croix */
+        right: 20px;
+        width: 50px; /* Taille de la croix ajustée */
+        height: 50px;
+        font-size: 36px; /* Taille de la croix ajustée */
+    }
+
+    /* Images dans la modale */
+    .photo-grid img {
+        width: 100%; /* Les images prennent 100% de la largeur de leur cellule */
+        height: auto; /* Conserver la hauteur automatique pour ne pas déformer l'image */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        object-fit: contain; /* Ajuste les images sans les déformer */
+        margin: 0 auto; /* Centrer les images dans chaque cellule de la grille */
+    }
+}
 
                                               /*SECTION SERVICES*/
 .section-navigation a {
@@ -416,6 +566,65 @@ footer {
     line-height: 1.3;
 }
 
+@media (max-width: 767px) {
+    /* Titre de la section services */
+    #services h2 {
+        font-size: 1.5rem; /* Taille du titre plus petite pour mobile */
+        margin-bottom: 15px;
+    }
+
+    /* Paragraphe sous le titre */
+    #services p {
+        font-size: 0.9rem; /* Taille du texte plus petite */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Conteneur des cartes de services */
+    .services-cards {
+        display: flex;
+        flex-direction: column; /* Disposition en colonne pour mobile */
+        gap: 15px; /* Espacement entre les cartes */
+        align-items: center; /* Centrer les cartes horizontalement */
+        padding: 0 20px; /* Marge à gauche et à droite pour éviter que les cartes touchent les bords */
+    }
+
+    /* Carte de service */
+    .service-card {
+        width: 100%; /* Prend toute la largeur disponible */
+        max-width: 450px; /* Largeur maximale pour ne pas trop étirer la carte */
+        padding: 15px; /* Espacement intérieur réduit */
+        text-align: left; /* Aligner le texte à gauche */
+        background: #dfdfdf; /* Fond gris clair */
+        border-radius: 12px; /* Coins arrondis */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transformation au survol */
+        height: 72px; /* Hauteur réduite des cartes pour être plus fines */
+    }
+
+    /* Effet au survol des cartes */
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Titre des cartes */
+    .service-card h3 {
+        font-size: 1rem; /* Taille du titre réduite pour mobile */
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Description des cartes */
+    .service-card p {
+        font-size: 0.85rem; /* Texte un peu plus petit */
+        color: #555;
+        line-height: 1.3;
+    }
+}
+
+
      
                                              /*SECTION HORAIRE*/
 
@@ -523,7 +732,7 @@ footer {
     font-weight: bold; /* Mettre le texte en gras */
 }
 
-/* Responsive - services et horaires*/
+/* Responsive - horaires */
 @media (max-width: 767px) {
     /* Masquer la navigation par onglets */
     .section-navigation {
@@ -536,76 +745,83 @@ footer {
         margin-bottom: 20px; /* Espacement entre les sections */
     }
 
-    /* Services : bulles horizontales longues */
-    .services-cards {
-        display: flex;
-        flex-direction: column; /* Aligner les bulles verticalement */
-        gap: 10px; /* Réduction de l'espacement entre les bulles */
-        margin: 0 auto; /* Centrer les bulles dans le conteneur */
-    }
-
-    .service-card {
-        display: flex; /* Dispose le contenu en ligne */
-        align-items: center; /* Centre verticalement les éléments */
-        background: #dfdfdf; /* Couleur de fond */
-        border-radius: 20px; /* Coins arrondis pour une apparence fine */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
-        padding: 10px 15px; /* Espacement intérieur réduit */
-        width: 100%; /* Prend toute la largeur */
-        max-width: 100%; /* Empêche les bulles de dépasser */
-        height: 60px; /* Hauteur réduite pour des bulles fines */
-        text-align: left; /* Texte aligné à gauche */
-        overflow: hidden; /* Empêche le débordement de contenu */
-    }
-
-    .service-card h3 {
-        font-size: 0.9rem; /* Taille du titre légèrement réduite */
-        font-weight: bold;
-        color: #333; /* Couleur du texte */
-        margin-right: 10px; /* Espacement entre le titre et la description */
-        white-space: nowrap; /* Empêche le texte du titre de passer à la ligne */
-        flex-shrink: 0; /* Le titre garde sa taille */
-    }
-
-    .service-card p {
-        font-size: 0.8rem; /* Taille du texte de description réduite */
-        color: #555; /* Couleur de la description */
-        margin: 0; /* Supprime les marges */
-        line-height: 1.2; /* Hauteur de ligne réduite */
-        flex-grow: 1; /* La description occupe l'espace disponible */
-    }
-
-
-    /* Horaires : conserver le style actuel */
-    .horaires-cards {
-        display: grid; /* Aucune modification */
-    }
-    /* Horaires : bulles similaires */
     .horaires-cards {
         display: flex;
-        flex-direction: column; /* Aligner verticalement les cartes */
-        gap: 15px;
+        flex-direction: column;
+        width: 100%; /* Assure que tout prend la largeur disponible */
     }
 
+    /* Chaque ligne */
     .horaires-card {
-        background: #dfdfdf;
-        padding: 15px;
-        border-radius: 30px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        width: 100%;
+        justify-content: space-between; /* Aligne le jour à gauche et les horaires à droite */
+        padding: 5px 0; /* Réduit l'espacement vertical entre les lignes */
+        border-bottom: 1px solid #ddd; /* Ligne séparatrice entre les jours */
+        width: 100%; /* Prend toute la largeur */
+        height: 70%;
+        background: none; /* Supprime tout fond */
+        box-shadow: none; /* Supprime toute ombre */
+        align-items: center; /* Centre verticalement le contenu pour une hauteur réduite */
     }
 
-    .horaires-card h3 {
-        font-size: 1.1rem;
+    /* Style pour le jour */
+    .horaires-card .jour {
+        font-size: 16px;
+        font-weight: normal;
+        color: #333;
+        text-align: left; /* Aligne totalement à gauche */
+        flex: 1; /* Permet au jour de s'étendre à gauche */
+        margin-left: 10px; /* Légère marge à gauche pour l'espacement */
+    }
+
+    /* Style pour les horaires */
+    .horaires-card .horaire-matin,
+    .horaires-card .horaire-apres-midi {
+        font-size: 16px;
         font-weight: bold;
+        color: #333;
+        text-align: right; /* Aligne totalement à droite */
+        margin-right: 10px; /* Légère marge à droite pour l'espacement */
     }
 
-    .horaires-card p {
-        font-size: 0.9rem;
+    /* Affichage normal des horaires */
+    .horaires-card .horaire-apres-midi {
+        display: block; /* Affiche les horaires après-midi */
+    }
+
+    /* Ajout du séparateur entre les horaires */
+    .horaires-card .horaire-matin:after {
+        content: " / "; /* Le séparateur entre les horaires */
+        margin: 0 10px; /* Espacement autour du séparateur */
+    }
+
+    /* Ne pas afficher le séparateur pour les jours fermés */
+    .horaires-card.closed .horaire-matin:after {
+        content: ""; /* Pas de séparateur sur les jours fermés */
+    }
+
+    /* Jours fermés */
+    .horaires-card.closed .horaire-matin {
+        font-style: italic;
+        color: #888;
+    }
+
+    .horaires-card.closed .horaire-apres-midi {
+        display: none;
+    }
+
+    /* Mise en évidence du jour actuel */
+    .horaires-card.today {
+        font-weight: bold;
+        color: #000;
+    }
+    .horaires-card .jour[data-jour="samedi"] ~ .horaire-matin:after {
+        content: ""; /* Supprime le séparateur */
+    }
+    /* Appliquer une couleur différente pour le jour actuel */
+    .jour.highlight {
+        color: #d82a03; /* Exemple de couleur pour le jour actuel, tu peux changer cette couleur */
+        font-weight: bold; /* Mettre le texte en gras */
     }
 }
 
@@ -747,4 +963,11 @@ footer {
         margin-left: -0%; /* Décale la bulle vers la gauche */
         margin-right: 5%; /* Ajoute un peu de marge à droite */
     }
+    .apropos-bubble p {
+        font-size: 0.9rem;
+        color: #000000; /* Couleur du texte */
+        margin: 0;
+        line-height: 1.6; /* Espacement entre les lignes */
+    }
+    
 }
