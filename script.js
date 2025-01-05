@@ -1,4 +1,4 @@
-// Scroll doux vers les sections //
+  // Scroll doux vers les sections //
 document.querySelectorAll('a.nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,7 +10,7 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
     });
 });
                         
-/*image MODAL*/
+  // image MODAL //
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("photoModal");
     const trigger = document.querySelector(".photo-gallery-trigger img");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
                                
-/*horaire*/
+  // horaire //
 document.addEventListener("DOMContentLoaded", function() {
     const today = new Date(); // Récupère la date actuelle
     const jours = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+  // Service et horaire //
 document.addEventListener("DOMContentLoaded", function () {
     // Obtenir les boutons et les sections
     const btnServices = document.getElementById("btn-services");
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//  format telephone //
 document.addEventListener("DOMContentLoaded", function() {
     const largeImage = document.querySelector('.salon-main-photo img');
     const images = ['image/11.jpg', 'image/55.jpg',"image/32.jpg", "image/22.jpg"]; // Ajoutez ici les chemins de vos autres images
